@@ -1,0 +1,572 @@
+/* Custom styles */
+.nav-link {
+    color: rgb(75, 85, 99);
+    transition: color 300ms;
+}
+
+.nav-link:hover {
+    color: rgb(59, 130, 246);
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 300ms;
+}
+
+.social-link:hover {
+    color: rgb(191, 219, 254);
+}
+
+.section-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(31, 41, 55);
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+.stat-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: rgb(59, 130, 246);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: rgb(75, 85, 99);
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 300ms;
+}
+
+.project-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.tech-tag {
+    background-color: rgb(219, 234, 254);
+    color: rgb(37, 99, 235);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0.15rem;
+    display: inline-block;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: rgb(59, 130, 246);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 300ms;
+}
+
+.btn-primary:hover {
+    background-color: rgb(37, 99, 235);
+}
+
+.skill-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgb(219, 234, 254);
+    color: rgb(37, 99, 235);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 300ms;
+}
+
+.skill-pill:hover {
+    background-color: rgb(37, 99, 235);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.5rem;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(59, 130, 246);
+    border-color: rgb(59, 130, 246);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideIn {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Add these styles */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    width: 100%;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.5rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Add these styles for the mobile menu */
+.mobile-menu {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mobile-menu.hidden {
+    display: block !important; /* Override Tailwind's hidden */
+    max-height: 0;
+    opacity: 0;
+}
+
+.mobile-menu:not(.hidden) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-height: 300px; /* Adjust based on your content */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-link {
+    display: block;
+    padding: 0.75rem 0;
+    text-align: center;
+    color: rgb(75, 85, 99);
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+    opacity: 0;
+}
+
+.mobile-menu:not(.hidden) .mobile-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Add delay to each link animation */
+.mobile-menu:not(.hidden) .mobile-link:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu:not(.hidden) .mobile-link:nth-child(2) { transition-delay: 0.15s; }
+.mobile-menu:not(.hidden) .mobile-link:nth-child(3) { transition-delay: 0.2s; }
+.mobile-menu:not(.hidden) .mobile-link:nth-child(4) { transition-delay: 0.25s; }
+.mobile-menu:not(.hidden) .mobile-link:nth-child(5) { transition-delay: 0.3s; }
+
+.mobile-link:hover {
+    color: rgb(59, 130, 246);
+    background-color: rgb(243, 244, 246);
+    transform: translateX(5px);
+}
+
+.mobile-menu-button {
+    padding: 0.5rem;
+    color: rgb(75, 85, 99);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+    color: rgb(59, 130, 246);
+    transform: scale(1.1);
+}
+
+/* Add these dark mode styles to styles.css */
+:root {
+    --background-light: #ffffff;
+    --background-dark: #1a1a1a;
+    --text-light: #1f2937;
+    --text-dark: #f3f4f6;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    transition: all 300ms;
+    margin-right: 1rem;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode hover state for theme toggle */
+.dark .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode styles for existing components */
+.dark body {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.dark .nav-link {
+    color: rgb(209, 213, 219);
+}
+
+.dark .nav-link:hover {
+    color: rgb(59, 130, 246);
+}
+
+.dark .mobile-link {
+    color: rgb(209, 213, 219);
+}
+
+.dark .mobile-menu {
+    background-color: rgb(31, 41, 55);
+}
+
+.dark .section-title {
+    color: rgb(243, 244, 246);
+}
+
+.dark .stat-card,
+.dark .project-card,
+.dark .skill-card {
+    background-color: rgb(31, 41, 55);
+    color: rgb(243, 244, 246);
+}
+
+.dark .text-gray-600 {
+    color: rgb(209, 213, 219);
+}
+
+.dark .form-input {
+    background-color: rgb(31, 41, 55);
+    border-color: rgb(75, 85, 99);
+    color: rgb(243, 244, 246);
+}
+
+.dark .form-input::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+/* Add these dark mode styles to your existing styles.css */
+
+/* Dark mode background colors for sections */
+.dark .bg-white {
+    background-color: var(--background-dark);
+}
+
+.dark .bg-gray-100 {
+    background-color: #1f2937; /* Slightly lighter than background-dark */
+}
+
+/* Dark mode text colors */
+.dark .text-gray-800 {
+    color: var(--text-dark);
+}
+
+.dark .text-gray-600 {
+    color: rgb(209, 213, 219);
+}
+
+/* Dark mode stat card styles */
+.dark .stat-card {
+    background-color: #2d3748; /* Slightly lighter than background */
+}
+
+.dark .stat-card p {
+    color: rgb(209, 213, 219);
+}
+
+/* Dark mode project card styles */
+.dark .project-card {
+    background-color: #2d3748;
+}
+
+.dark .project-card h3 {
+    color: var(--text-dark);
+}
+
+/* Dark mode skill card styles */
+.dark .skill-card {
+    background-color: #2d3748;
+}
+
+.dark .skill-card h3 {
+    color: var(--text-dark);
+}
+
+/* Dark mode footer */
+.dark .bg-gray-800 {
+    background-color: #111827;
+}
+
+/* Dark mode mobile menu */
+.dark .mobile-link:hover {
+    background-color: #374151;
+}
+
+/* Dark mode form input placeholder */
+.dark .form-input::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+/* Dark mode hero section gradient */
+.dark #home {
+    background: linear-gradient(to right, #1e40af, #6b21a8);
+}
+
+/* Update theme toggle button colors for better visibility */
+.dark .theme-toggle .fa-moon {
+    color: #93c5fd;
+}
+
+.theme-toggle .fa-sun {
+    color: #fbbf24;
+}
+
+/* Add these styles for the project carousel */
+.project-carousel {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    perspective: 1000px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.project-slide {
+    position: relative;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    position: absolute;
+    width: 100%;
+    max-width: 350px;
+    min-height: 450px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-card.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+}
+
+.project-card.prev {
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+    left: 50%;
+    transform: translateX(calc(-50% - 380px)) scale(0.85);
+}
+
+.project-card.next {
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: none;
+    left: 50%;
+    transform: translateX(calc(-50% + 380px)) scale(0.85);
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-nav.left-arrow {
+    left: 20px;
+}
+
+.carousel-nav.right-arrow {
+    right: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .project-carousel {
+        max-width: 1000px;
+    }
+
+    .project-card.prev {
+        transform: translateX(calc(-50% - 320px)) scale(0.85);
+    }
+
+    .project-card.next {
+        transform: translateX(calc(-50% + 320px)) scale(0.85);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-carousel {
+        padding: 0 30px;
+    }
+
+    .project-card.prev,
+    .project-card.next {
+        opacity: 0;
+    }
+
+    .carousel-nav.left-arrow {
+        left: 10px;
+    }
+
+    .carousel-nav.right-arrow {
+        right: 10px;
+    }
+}
+
+/* Dark mode styles for carousel */
+.dark .carousel-nav {
+    background-color: rgba(31, 41, 55, 0.9);
+}
+
+.dark .carousel-nav:hover {
+    background-color: rgb(31, 41, 55);
+}
+
+.dark .carousel-nav i {
+    color: white;
+}
+
+/* Update project card styles */
+.project-card {
+    position: absolute;
+    width: 100%;
+    max-width: 350px;
+    min-height: 450px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Update tech tag styles */
+.tech-tag {
+    background-color: rgb(219, 234, 254);
+    color: rgb(37, 99, 235);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0.15rem;
+    display: inline-block;
+}
+
+/* Update the flex container for tech tags */
+.flex.flex-wrap.space-x-2 {
+    margin: -0.15rem;
+    gap: 0;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 380px;
+        min-height: 480px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    .tech-tag {
+        margin: 0.1rem;
+        padding: 0.25rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .project-card .p-6 {
+        padding: 1.25rem;
+    }
+
+    .project-card p {
+        margin-bottom: 0.75rem;
+    }
+}
